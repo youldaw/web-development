@@ -1,3 +1,16 @@
+$(function () {
+
+    $('.header-bars').on('click', function (e) {
+        e.preventDefault();
+        let mobileHeader = $('.header__mobile');
+        if (mobileHeader.hasClass('header-show')) {
+            mobileHeader.removeClass('header-show');
+        } else {
+            mobileHeader.addClass('header-show');
+        }
+    });
+    
+})
 
 // rolly js
 const r = rolly({
@@ -20,4 +33,8 @@ text.innerHTML = text.innerText
         (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
     )
     .join("");
+
+
+
+
 
